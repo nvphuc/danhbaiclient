@@ -212,7 +212,7 @@ public class GuiPlay extends Gui {
 		panelChat.add(txtChat);
 		txtChat.setColumns(10);
 
-		btSend = new JButton("Gửi Đi");
+		btSend = new JButton("Gửi");
 		btSend.addActionListener(this);
 		btSend.setMargin(new Insets(0, 0, 0, 0));
 		btSend.setAlignmentY(0.0f);
