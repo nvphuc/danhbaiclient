@@ -19,12 +19,12 @@ public class ProcessorGuiWaitRoom extends Processor {
 	/* Ham xu ly nut tao phong */
 	public void createRoom() {
 		String RoomName = JOptionPane.showInputDialog(gui,
-				"Nhập tên phòng muốn tạo:", "Inform",
+				"Nhập tên phòng :", "Inform",
 				JOptionPane.INFORMATION_MESSAGE);
 		if (RoomName != null) {
 			while (RoomName.equals("") || RoomName.length() > 10) {
 				String input = JOptionPane.showInputDialog(gui,
-						"Nhập tên phòng muốn tạo (Tối đa 10 ký tự):", "Inform",
+						"Nhập tên phòng (Từ 6 đến 10 ký tự):", "Inform",
 						JOptionPane.INFORMATION_MESSAGE);
 				RoomName = input;
 				if (RoomName == null)
@@ -34,7 +34,7 @@ public class ProcessorGuiWaitRoom extends Processor {
 		if (RoomName != null) {
 			String[] buttons = { "Đấu 2", "Đấu 4" };
 			int roomSize = JOptionPane.showOptionDialog(null,
-					"Chọn loại phòng", "Xác nhận", JOptionPane.DEFAULT_OPTION,
+					"Chọn loại phòng", "Xác Nhận", JOptionPane.DEFAULT_OPTION,
 					0, null, buttons, buttons[0]);
 
 			if (roomSize != -1) {
@@ -58,12 +58,12 @@ public class ProcessorGuiWaitRoom extends Processor {
 							Integer.parseInt(data[1]));
 					((GuiWaitRoom) gui).dispose();
 				} else {
-					JOptionPane.showMessageDialog(getGui(), "Trung ten phong",
+					JOptionPane.showMessageDialog(getGui(), "Trùng Tên Phòng",
 							"Error", JOptionPane.ERROR_MESSAGE);
 				}
 			}
 		}
-		// Thử gui wait
+		// Thá»­ gui wait
 	}
 
 	/* Ham lay danh sach phong tu Server */
